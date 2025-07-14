@@ -136,4 +136,47 @@ print(encoded_text.decode('utf-8'))  # Witaj Świecie
 print(True)
 print(False)
 
+# kolekcje
+# lista, krotka(tupla), zbior(set), słownik
 
+lista = [5, 6, 7, 8, 9, "Radek"]
+print(lista)  # [5, 6, 7, 8, 9, 'Radek']
+lista.append("Ewa")
+print(lista)  # [5, 6, 7, 8, 9, 'Radek', 'Ewa']
+lista.remove("Radek")
+print(lista)  # [5, 6, 7, 8, 9, 'Ewa']
+
+lista2 = lista  # kopia referencji
+print(lista)  # [5, 6, 7, 8, 9, 'Ewa']
+print(lista2)  # [5, 6, 7, 8, 9, 'Ewa']
+lista.remove(9)
+print(lista)  # [5, 6, 7, 8, 'Ewa']
+print(lista2)  # [5, 6, 7, 8, 'Ewa']
+
+lista_copy = lista.copy()  # skopiowanie elementów listy do innej
+print(lista)
+print(lista_copy)
+lista_copy.append("Radek")
+print(lista)  # [5, 6, 7, 8, 'Ewa']
+print(lista_copy)  # [5, 6, 7, 8, 'Ewa', 'Radek']
+
+# krotka - tupla - lista do odczytu
+krotka = tuple(lista_copy)
+print(krotka)  # (5, 6, 7, 8, 'Ewa', 'Radek') - pozwala efektywniwj zarzadzac pamięcią
+
+# zbiór
+zbior = {5, 6, 5, 6, 6, 7, 8, 9, 0}  # przechowuje unikalne wartości
+print(zbior)  # {0, 5, 6, 7, 8, 9}
+# nie zachowuje kolejnoci
+
+slownik = {"name": "Radek", "age": 56}
+print(slownik)  # {'name': 'Radek', 'age': 56}
+slownik2 = {"name": ["Radek", "Tomek", "Piotr"]}
+print(slownik2)
+# {'name': ['Radek', 'Tomek', 'Piotr']}
+print(slownik.keys())
+print(slownik.values())
+print(slownik.items())
+# dict_keys(['name', 'age'])
+# dict_values(['Radek', 56])
+# dict_items([('name', 'Radek'), ('age', 56)])
