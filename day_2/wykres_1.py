@@ -21,3 +21,4 @@ print(df.describe())
 
 df.plot.box()
 plt.show()
+# https://colab.research.google.com/drive/1o_PVAm5HCgfx_VpwLzPMX1JTrJKZ8z0c#scrollTo=o6pq-VpRGzyj
